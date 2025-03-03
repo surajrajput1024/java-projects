@@ -1,10 +1,13 @@
 package ticket.booking.utils;
 
-import ticket.booking.entities.User;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class UserServiceUtil {
-    public static boolean checkPassword(User currentUser, User dbUser)  {
-        // Need to hash current password and then we need to match with db passed (hashed)
-        return currentUser.getPassword().equals(dbUser.getPassword());
+    public static boolean checkPassword(String plainPassword, String hashedPassword)  {
+        return BCrypt.checkpw(plainPassword, hashedPassword);
+    }
+
+    public  static  String hashedPassword(String plainPassword) {
+        return BCrypt.hashpw(plainPassword, BCrypt.gensalt());
     }
 }

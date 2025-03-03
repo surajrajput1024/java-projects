@@ -1,19 +1,54 @@
 package ticket.booking.entities;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Date;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Ticket {
     private String ticketId;
     private String from;
     private String to;
     private String pnr;
-    private Train train;
+    private String trainId;
+    private Date dateOfJourney;
 
-    public Ticket(String ticketId, String from, String to, String pnr, Train train) {
+    // Default constructor
+    public Ticket() {
+    }
+
+    // Parameterized constructor with JsonCreator annotation
+    @JsonCreator
+    public Ticket(@JsonProperty("ticketId") String ticketId,
+                  @JsonProperty("from") String from,
+                  @JsonProperty("to") String to,
+                  @JsonProperty("pnr") String pnr,
+                  @JsonProperty("trainId") String trainId,
+                  @JsonProperty("dateOfJourney") Date dateOfJourney) {
         this.ticketId = ticketId;
         this.from = from;
         this.to = to;
         this.pnr = pnr;
-        this.train = train;
+        this.trainId = trainId;
+        this.dateOfJourney = dateOfJourney;
+    }
+
+    // Getters and setters
+    public Date getDateOfJourney() {
+        return dateOfJourney;
+    }
+
+    public void setDateOfJourney(Date dateOfJourney) {
+        this.dateOfJourney = dateOfJourney;
+    }
+
+    public String getTrainId() {
+        return trainId;
+    }
+
+    public void setTrainId(String trainId) {
+        this.trainId = trainId;
     }
 
     public String getTicketId() {
@@ -46,13 +81,5 @@ public class Ticket {
 
     public void setPnr(String pnr) {
         this.pnr = pnr;
-    }
-
-    public Train getTrain() {
-        return train;
-    }
-
-    public void setTrain(Train train) {
-        this.train = train;
     }
 }
