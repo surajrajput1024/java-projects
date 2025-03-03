@@ -1,0 +1,50 @@
+[
+  {
+    "trainId": "TR001",
+    "name": "Rajdhani Express",
+    "trainNumber": "12951",
+    "seatsAvailable": [[1, 2, 3], [4, 5, 6]],
+    "schedule": {
+      "Delhi": {
+        "arrival": "2024-03-10T06:00:00Z",
+        "departure": "2024-03-10T06:30:00Z"
+      },
+      "Mumbai": {
+        "arrival": "2024-03-10T18:00:00Z",
+        "departure": "2024-03-10T18:30:00Z"
+      }
+    }
+  },
+  {
+    "trainId": "TR002",
+    "name": "Howrah Express",
+    "trainNumber": "12839",
+    "seatsAvailable": [[7, 8, 9], [10, 11, 12]],
+    "schedule": {
+      "Kolkata": {
+        "arrival": "2024-03-11T08:00:00Z",
+        "departure": "2024-03-11T08:30:00Z"
+      },
+      "Chennai": {
+        "arrival": "2024-03-11T20:00:00Z",
+        "departure": "2024-03-11T20:30:00Z"
+      }
+    }
+  },
+  {
+    "trainId": "TR003",
+    "name": "Shatabdi Express",
+    "trainNumber": "12002",
+    "seatsAvailable": [[13, 14, 15], [16, 17, 18]],
+    "schedule": {
+      "Bangalore": {
+        "arrival": "2024-03-12T07:00:00Z",
+        "departure": "2024-03-12T07:30:00Z"
+      },
+      "Hyderabad": {
+        "arrival": "2024-03-12T15:00:00Z",
+        "departure": "2024-03-12T15:30:00Z"
+      }
+    }
+  }
+]
