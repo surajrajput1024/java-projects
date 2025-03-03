@@ -1,4 +1,4 @@
-package irctc.app.src.main.java.ticket.booking.entities;
+package ticket.booking.entities;
 
 import java.util.List;
 

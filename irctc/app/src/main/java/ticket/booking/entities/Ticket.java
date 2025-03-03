@@ -1,4 +1,5 @@
-package irctc.app.src.main.java.ticket.booking.entities;
+package ticket.booking.entities;
+
 
 public class Ticket {
     private String ticketId;
